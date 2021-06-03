@@ -142,5 +142,4 @@ const personCompany = {
 	age: 25,
 	company: 'Facebook',
 };
-
 console.log(personCompany);
