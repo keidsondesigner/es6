@@ -182,3 +182,36 @@ class Carro {
 
 const fiat = new Carro('Uno', 150);
 fiat.acelerar();
+
+
+
+
+// ######################################################
+// Classes - set   &    get
+// Depois que um usuário for criado não pode mas alterar seu nome
+// '_' underline aponta que a propriedade é privada, que só pode ser acessada dentro da class
+
+// para acessar a propriedade privada _name é necessário usar o método 'get'
+// para manipular a propriedade privada _name é necessário usar o método 'set'
+
+
+
+class Pessoa {
+	constructor(name) {
+		this._name = name;
+	}
+
+	get name() {
+		return this._name;
+	}
+	set name(newName) {
+		return this._name = newName;
+	}
+}
+
+const newPerson = new Pessoa('Keidson');
+
+// manipulando a class com 'set' e atribuindo um novo nome
+newPerson.name = 'Novo nome';
+
+console.log(newPerson.name);
