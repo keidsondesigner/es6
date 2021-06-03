@@ -143,3 +143,42 @@ const personCompany = {
 	company: 'Facebook',
 };
 console.log(personCompany);
+
+
+
+
+
+// ######################################################
+// Classes - Função construtora
+
+
+
+function Car(brand, price) {
+	this.brand = brand;
+	this.price = price;
+};
+
+const civic = new Car('honda', 130);
+const hb20 = new Car('hyundai', 90);
+
+console.log(civic);
+console.log(hb20);
+
+
+// ######################################################
+// Classes
+
+class Carro {
+	constructor(brand, price) {
+		this.brand = brand;
+		this.price = price;
+	}
+
+	acelerar() {
+		console.log('Carro em movimento!!!');
+	}
+};
+
+
+const fiat = new Carro('Uno', 150);
+fiat.acelerar();
