@@ -88,3 +88,59 @@ const showFullName = ({firstName, secondName, address: { city, region }}) => {
 };
 
 showFullName(person);
+
+
+// ######################################################
+// rest 
+
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8];
+
+const [primeiro, segundo, ...rest] = numeros;
+console.log(primeiro, segundo);
+console.log(rest)
+
+
+
+
+const pessoa = {
+	name: 'Arthur',
+	age: 11,
+	height: 1.75,
+	company: 'Cataline',
+};
+
+const { name, ...restante } = pessoa;
+console.log(name);
+console.log(restante);
+
+
+
+
+
+const sum = (...params) => {
+	return params.reduce((acc, num) => {
+		return acc + num;
+	});
+};
+console.log(sum(5, 5, 10, 10));
+
+
+
+// ######################################################
+// spread
+
+
+const person1 = {
+	name: 'Karol',
+	age: 19,
+	height: 1.75,
+	company: 'Google',
+};
+
+const personCompany = {
+	...person1,
+	age: 25,
+	company: 'Facebook',
+};
+
+console.log(personCompany);
