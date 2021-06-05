@@ -215,3 +215,51 @@ const newPerson = new Pessoa('Keidson');
 newPerson.name = 'Novo nome';
 
 console.log(newPerson.name);
+
+
+
+// ######################################################
+// Class - Métodos estáticos
+
+class Calculator {
+	static sum(a, b) {
+		return a + b;
+	}
+};
+
+console.log(Calculator.sum(10, 60));
+
+
+
+
+class UmaPessoa {
+	constructor(firstName, secondName) {
+		this.firstName = firstName;
+		this.secondName = secondName;
+	}
+
+	get fullName() {
+		return UmaPessoa.joinNames(this.firstName, this.secondName);
+	}
+	
+	static joinNames(firstName, secondName) {
+		return `${firstName} ${secondName}`;
+	}
+};
+
+const novaPessoa = new UmaPessoa('Joel', 'Lima');
+console.log(novaPessoa.fullName);
+
+
+// ######################################################
+// Class - Herança
+
+class Veiculo {
+	constructor(rodas) {
+		this.rodas = rodas;
+	}
+
+	acelerar() {
+		console.log('Acelerou!!!');
+	}
+}
