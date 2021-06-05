@@ -269,10 +269,7 @@ class Moto extends Veiculo {
 		console.log(`empinou com ${this.rodas} rodas`)
 	}
 
-	acelerando() {
-		super.acelerando()
-		console.log('acelerou muito!')
-	}
+
 };
 
 const bross = new Moto(2)
